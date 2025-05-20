@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gratis Bet Seu Cassino Online - Login</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <header>
+    <img src="img/placeholder_banner.jpg" alt="Banner do Cassino" style="max-width: 100%; height: auto; margin-top: 5px;">
+    <div class="container">
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="login.html">Login</a> <a href="cadastro.html">Cadastro</a>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <h2>Bem-vindo ao Gratis Bet - Seu Cassino Online!</h2>
+      <p>Experimente a emoção e diversão dos slots tudo totalmente gratuito.</p>
+    </section>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <div class="login-box">
+        <h2>Login</h2>
+        <form onsubmit="logar(event)">
+          <div class="form-group">
+            <label for="email">Email:</label> <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <span class="toggle-password" onclick="toggleSenha()" aria-label="Mostrar ou esconder senha">👁️</span>
+          </div>
+          <button type="submit" class="btn-login">Entrar</button>
+        </form>
+
+        <div class="google-btn" onclick="loginComGoogle()">
+          <div class="google-icon-wrapper">
+            <img class="google-icon" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo">
+          </div>
+          <span class="btn-text">Continuar com o Google</span>
+        </div>
+
+        <div class="phone-login">
+          <h3>Ou entre com seu celular</h3>
+
+          <div class="form-group">
+            <label for="country-code">Código do País:</label>
+            <select id="country-code" required>
+              <option value="+55" selected>Brasil (+55)</option>
+              <option value="+1">Estados Unidos (+1)</option>
+              <option value="+54">Argentina (+54)</option>
+             <option value="+93">Afeganistão (+93)</option>
+              <option value="+27">África do Sul (+27)</option>
+              <option value="+213">Argélia (+213)</option>
+              <option value="+244">Angola (+244)</option>
+              <option value="+966">Arábia Saudita (+966)</option>
+              <option value="+61">Austrália (+61)</option>
+              <option value="+43">Áustria (+43)</option>
+              <option value="+880">Bangladesh (+880)</option>
+              <option value="+32">Bélgica (+32)</option>
+              <option value="+501">Belize (+501)</option>
+              <option value="+229">Benin (+229)</option>
+              <option value="+591">Bolívia (+591)</option>
+              <option value="+359">Bulgária (+359)</option>
+              <option value="+237">Camarões (+237)</option>
+              <option value="+1">Canadá (+1)</option>
+              <option value="+236">República Centro-Africana (+236)</option>
+              <option value="+56">Chile (+56)</option>
+              <option value="+86">China (+86)</option>
+              <option value="+57">Colômbia (+57)</option>
+              <option value="+506">Costa Rica (+506)</option>
+              <option value="+225">Costa do Marfim (+225)</option>
+              <option value="+385">Croácia (+385)</option>
+              <option value="+503">El Salvador (+503)</option>
+              <option value="+971">Emirados Árabes Unidos (+971)</option>
+              <option value="+593">Equador (+593)</option>
+              <option value="+372">Estônia (+372)</option>
+              <option value="+251">Etiópia (+251)</option>
+              <option value="+63">Filipinas (+63)</option>
+              <option value="+358">Finlândia (+358)</option>
+              <option value="+33">França (+33)</option>
+              <option value="+49">Alemanha (+49)</option>
+              <option value="+30">Grécia (+30)</option>
+              <option value="+502">Guatemala (+502)</option>
+              <option value="+240">Guiné Equatorial (+240)</option>
+              <option value="+91">Índia (+91)</option>
+              <option value="+62">Indonésia (+62)</option>
+              <option value="+972">Israel (+972)</option>
+              <option value="+39">Itália (+39)</option>
+              <option value="+81">Japão (+81)</option>
+              <option value="+254">Quênia (+254)</option>
+              <option value="+266">Lesoto (+266)</option>
+              <option value="+218">Líbia (+218)</option>
+              <option value="+223">Mali (+223)</option>
+              <option value="+60">Malásia (+60)</option>
+              <option value="+212">Marrocos (+212)</option>
+              <option value="+52">México (+52)</option>
+              <option value="+258">Moçambique (+258)</option>
+              <option value="+234">Nigéria (+234)</option>
+              <option value="+505">Nicarágua (+505)</option>
+              <option value="+31">Países Baixos (Holanda) (+31)</option>
+              <option value="+507">Panamá (+507)</option>
+              <option value="+92">Paquistão (+92)</option>
+              <option value="+595">Paraguai (+595)</option>
+              <option value="+51">Peru (+51)</option>
+              <option value="+48">Polônia (+48)</option>
+              <option value="+351">Portugal (+351)</option>
+              <option value="+40">Romênia (+40)</option>
+              <option value="+7">Rússia (+7)</option>
+              <option value="+65">Singapura (+65)</option>
+              <option value="+82">Coreia do Sul (+82)</option>
+              <option value="+34">Espanha (+34)</option>
+              <option value="+46">Suécia (+46)</option>
+              <option value="+41">Suíça (+41)</option>
+              <option value="+249">Sudão (+249)</option>
+              <option value="+66">Tailândia (+66)</option>
+              <option value="+255">Tanzânia (+255)</option>
+              <option value="+216">Tunísia (+216)</option>
+              <option value="+90">Turquia (+90)</option>
+              <option value="+256">Uganda (+256)</option>
+              <option value="+598">Uruguai (+598)</option>
+              <option value="+998">Uzbequistão (+998)</option>
+              <option value="+58">Venezuela (+58)</option>
+              <option value="+260">Zâmbia (+260)</option>
+              </select>
+          </div>
+
+          <div class="form-group">
+            <label for="phone-number">Número de Telefone:</label>
+            <input type="tel" id="phone-number" placeholder="(DDD) 91234-5678" required>
+          </div>
+
+          <div id="recaptcha-container" style="margin-top: 10px;"></div>
+          <button onclick="enviarCodigoSMS()">Enviar código</button>
+
+          <div id="codigo-section" style="display:none; margin-top: 15px;">
+            <label for="codigo-sms">Código recebido por SMS:</label>
+            <input type="text" id="codigo-sms" placeholder="XXXXXX">
+            <button onclick="verificarCodigoSMS()">Verificar código</button>
+          </div>
+        </div>
+
+        <div class="recover-password-link">
+          <a href="javascript:void(0);" onclick="recuperarSenha()">Esqueceu a senha?</a>
+        </div>
+
+        <div class="register-link">
+          Não tem uma conta? <a href="cadastruo.html">Cadastre-se aqui</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Developed by Sinnomar Silva Lino <span id="currentYear"></span> Gratis Bet. Todos os Direitos Reservados.</p>
+  </footer>
+
+  <script type="module">
+    // Importe as funções que você precisa dos SDKs que você precisa
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+    import { 
+      getAuth, 
+      signInWithEmailAndPassword, 
+      GoogleAuthProvider, 
+      signInWithPopup, 
+      sendPasswordResetEmail,
+      RecaptchaVerifier,
+      signInWithPhoneNumber
+    } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
+
+    // Configuração do Firebase do seu aplicativo da web
+    const firebaseConfig = {
+      apiKey: "AIzaSyAvDHmSCgDLnGVk5-8wF5gy3VE7ZlojcKY", // MANTENHA SUA API KEY SEGURA E CONSIDERE RESTRIÇÕES
+      authDomain: "freebet-9b925.firebaseapp.com",
+      projectId: "freebet-9b925",
+      storageBucket: "freebet-9b925.firebasestorage.app",
+      messagingSenderId: "626232438021",
+      appId: "1:626232438021:web:aba78987dd6ecce213db6c"
+    };
+
+    // Inicialize o Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app); // Obtenha a instância de autenticação
+
+    // Exponha as funções ao escopo global para que possam ser chamadas por atributos onclick
+    window.logar = function(event) {
+      event.preventDefault();
+      const emailValue = document.getElementById("email").value; // Corrigido para 'email'
+      const senha = document.getElementById("password").value;
+
+      signInWithEmailAndPassword(auth, emailValue, senha)
+        .then((userCredential) => {
+          // Login bem-sucedido
+          window.location.href = "lobby.html";
+        })
+        .catch((error) => {
+          alert("Erro ao fazer login: " + error.message);
+        });
+    }
+
+    window.toggleSenha = function() {
+      const input = document.getElementById("password");
+      const icon = document.querySelector(".toggle-password");
+      input.type = input.type === "password" ? "text" : "password";
+      icon.textContent = input.type === "password" ? "👁️" : "🙈";
+    }
+
+    window.loginComGoogle = function() {
+      const provider = new GoogleAuthProvider();
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          alert(`Bem-vindo, ${user.displayName}!`);
+          window.location.href = "lobby.html";
+        })
+        .catch((error) => {
+          alert("Erro ao fazer login com Google: " + error.message);
+          console.error("Erro Google Auth:", error);
+        });
+    }
+
+    window.recuperarSenha = function() {
+      const emailValue = prompt("Por favor, insira seu e-mail para redefinir a senha:");
+      if (emailValue) {
+        sendPasswordResetEmail(auth, emailValue)
+          .then(() => alert("E-mail de recuperação enviado. Verifique sua caixa de entrada."))
+          .catch((error) => alert("Erro ao enviar e-mail de recuperação: " + error.message));
+      }
+    }
+    
+    window.appVerifier = null; // Para armazenar a instância do RecaptchaVerifier
+
+    window.enviarCodigoSMS = function() {
+      const countryCode = document.getElementById("country-code").value;
+      const phone = document.getElementById("phone-number").value;
+      const phoneNumber = countryCode + phone.replace(/\D/g, ''); // Remove não dígitos
+
+      // Inicializa o RecaptchaVerifier se ainda não foi inicializado ou se o widget expirou
+      // É importante que o 'recaptcha-container' esteja visível ou que o reCAPTCHA seja 'invisible'
+      if (!window.appVerifier) {
+        window.appVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+          'size': 'invisible', // Pode ser 'normal' ou 'compact' se você quiser que seja visível
+          'callback': (response) => {
+            // reCAPTCHA resolvido, pode prosseguir com o envio do SMS
+            // Este callback é mais útil para reCAPTCHAs visíveis.
+            // Para 'invisible', signInWithPhoneNumber pode ser chamado diretamente.
+            console.log("reCAPTCHA resolvido");
+          },
+          'expired-callback': () => {
+            // Resposta expirou. Peça ao usuário para verificar novamente.
+            alert("Verificação reCAPTCHA expirou. Tente novamente.");
+            // Recrie o appVerifier se necessário
+             window.appVerifier.render().then(function(widgetId) {
+               // grecaptcha.reset(widgetId); // Pode ser necessário resetar
+             });
+          }
+        });
+      }
+      
+      // Renderiza o reCAPTCHA (especialmente se 'invisible', para que possa funcionar em segundo plano)
+      window.appVerifier.render().then((widgetId) => {
+        window.recaptchaWidgetId = widgetId; // Salva o ID do widget se precisar resetar
+        signInWithPhoneNumber(auth, phoneNumber, window.appVerifier)
+          .then((confirmationResult) => {
+            window.confirmationResult = confirmationResult; // Salva para usar na verificação do código
+            alert("Código SMS enviado!");
+            document.getElementById("codigo-section").style.display = "block";
+          })
+          .catch((error) => {
+            alert("Erro ao enviar código SMS: " + error.message);
+            console.error("Erro envio SMS:", error);
+            // Se o erro for sobre o container do reCAPTCHA, verifique se ele está no DOM e visível
+            // ou se o reCAPTCHA já foi usado/expirou.
+            // Pode ser necessário resetar o reCAPTCHA: grecaptcha.reset(window.recaptchaWidgetId);
+          });
+      }).catch((error) => {
+          alert("Erro ao renderizar reCAPTCHA: " + error.message);
+          console.error("Erro renderizar reCAPTCHA:", error);
+      });
+    }
+
+    window.verificarCodigoSMS = function() {
+      const codigo = document.getElementById("codigo-sms").value;
+      if (window.confirmationResult) {
+        window.confirmationResult.confirm(codigo)
+          .then((result) => {
+            const user = result.user;
+            alert("Login com celular bem-sucedido! Bem-vindo: " + (user.phoneNumber || user.uid));
+            window.location.href = "lobby.html";
+          })
+          .catch((error) => {
+            alert("Erro ao verificar código SMS: " + error.message);
+          });
+      } else {
+        alert("Primeiro envie o código SMS.");
+      }
+    }
+
+    // Para o ano do copyright
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  </script>
+  </body>
+</html>
